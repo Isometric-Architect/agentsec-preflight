@@ -5,9 +5,12 @@ from typing import Any
 from .models import CLAIM_CEILING
 
 
+SAMPLE_SCHEMA = "AgentSecPreflightInput/v0.1"
+
+
 def _base() -> dict[str, Any]:
     return {
-        "schema": "AgentSecPreflightInput/v0.1",
+        "schema": SAMPLE_SCHEMA,
         "source_trace_count": 1,
         "docs_url_present": True,
         "input_schema_present": True,
@@ -30,7 +33,7 @@ def descriptor(**kwargs: Any) -> dict[str, Any]:
 
 
 def sample_descriptors() -> list[dict[str, Any]]:
-    return [
+    descriptors = [
         descriptor(descriptor_id="email_draft_tool", name="Email Draft Tool", tool_type="draft_generation"),
         descriptor(
             descriptor_id="email_send_missing_approval",
@@ -76,6 +79,7 @@ def sample_descriptors() -> list[dict[str, Any]]:
             claim_overreach_terms=["certified safe", "product ready", "action authorized"],
         ),
     ]
+    return descriptors
 
 
 def by_id(descriptor_id: str) -> dict[str, Any] | None:

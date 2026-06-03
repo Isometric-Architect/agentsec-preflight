@@ -3,6 +3,39 @@ from __future__ import annotations
 from typing import Any
 
 
+DESCRIPTOR_REQUIRED_FIELDS = [
+    "descriptor_id",
+    "name",
+    "tool_type",
+    "source_trace_count",
+    "docs_url_present",
+    "input_schema_present",
+    "required_fields_present",
+    "auth_scope_present",
+    "approval_required",
+    "external_action",
+    "destructive_action",
+    "public_post_action",
+    "deprecated_signal",
+    "claim_overreach_terms",
+]
+
+REPORT_REQUIRED_FIELDS = [
+    "report_id",
+    "decision",
+    "reason_codes",
+    "safe_next_action",
+    "claim_ceiling",
+]
+
+RECEIPT_REQUIRED_FIELDS = [
+    "receipt_id",
+    "preflight_decision",
+    "action_taken",
+    "external_action_performed",
+    "claim_ceiling",
+]
+
 CLAIM_CEILING = [
     "standalone_extraction_pack_only",
     "no_external_repo_creation",
@@ -26,31 +59,17 @@ MUST_NOT_CLAIM = [
 ]
 
 
+def _missing_fields(payload: dict[str, Any], fields: list[str]) -> list[str]:
+    return [f"missing_{field}" for field in fields if field not in payload]
+
+
 def validate_descriptor(descriptor: dict[str, Any]) -> list[str]:
-    required = [
-        "descriptor_id",
-        "name",
-        "tool_type",
-        "source_trace_count",
-        "docs_url_present",
-        "input_schema_present",
-        "required_fields_present",
-        "auth_scope_present",
-        "approval_required",
-        "external_action",
-        "destructive_action",
-        "public_post_action",
-        "deprecated_signal",
-        "claim_overreach_terms",
-    ]
-    return [f"missing_{field}" for field in required if field not in descriptor]
+    return _missing_fields(descriptor, DESCRIPTOR_REQUIRED_FIELDS)
 
 
 def validate_report(report: dict[str, Any]) -> list[str]:
-    required = ["report_id", "decision", "reason_codes", "safe_next_action", "claim_ceiling"]
-    return [f"missing_{field}" for field in required if field not in report]
+    return _missing_fields(report, REPORT_REQUIRED_FIELDS)
 
 
 def validate_receipt(receipt: dict[str, Any]) -> list[str]:
-    required = ["receipt_id", "preflight_decision", "action_taken", "external_action_performed", "claim_ceiling"]
-    return [f"missing_{field}" for field in required if field not in receipt]
+    return _missing_fields(receipt, RECEIPT_REQUIRED_FIELDS)

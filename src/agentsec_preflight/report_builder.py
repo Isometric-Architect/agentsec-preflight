@@ -8,11 +8,15 @@ from .models import CLAIM_CEILING, MUST_NOT_CLAIM
 from .preflight_engine import preflight_descriptor
 
 
+REPORT_SCHEMA = "AgentSecPreflightReport/v0.1"
+RECEIPT_SCHEMA = "AgentSecPreflightReceipt/v0.1"
+
+
 def build_report(descriptor: dict[str, Any] | None) -> dict[str, Any]:
     preflight = preflight_descriptor(descriptor)
     descriptor_id = descriptor["descriptor_id"] if descriptor else "NO_MATCH"
     return {
-        "schema": "AgentSecPreflightReport/v0.1",
+        "schema": REPORT_SCHEMA,
         "report_id": f"report_{descriptor_id}",
         "descriptor_id": descriptor_id,
         **preflight,
@@ -31,7 +35,7 @@ def build_report(descriptor: dict[str, Any] | None) -> dict[str, Any]:
 
 def build_receipt(report: dict[str, Any]) -> dict[str, Any]:
     return {
-        "schema": "AgentSecPreflightReceipt/v0.1",
+        "schema": RECEIPT_SCHEMA,
         "receipt_id": f"receipt_{report['descriptor_id']}",
         "input_descriptor_ref": report["descriptor_id"],
         "preflight_decision": report["decision"],

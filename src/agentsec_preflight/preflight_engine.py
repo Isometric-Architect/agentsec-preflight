@@ -5,6 +5,11 @@ from typing import Any
 from .models import CLAIM_CEILING
 
 
+TURN_SAVING_REASON = (
+    "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
+)
+
+
 def _result(
     *,
     decision: str,
@@ -17,7 +22,7 @@ def _result(
     return {
         "decision": decision,
         "reason_codes": reason_codes,
-        "turn_saving_reason": "Preflight before action avoids a likely wasted or unsafe next tool-call turn.",
+        "turn_saving_reason": TURN_SAVING_REASON,
         "negative_cache_labels": [f"NEG_{code}" for code in reason_codes if not decision.startswith("PASS")],
         "no_match_guard_triggered": no_match_guard_triggered,
         "safe_next_action": safe_next_action,
@@ -25,6 +30,14 @@ def _result(
         "blocked_next_action": blocked_next_action,
         "claim_ceiling": CLAIM_CEILING,
     }
+
+
+def _has_external_boundary(descriptor: dict[str, Any]) -> bool:
+    return bool(
+        descriptor.get("external_action")
+        or descriptor.get("public_post_action")
+        or descriptor.get("approval_required")
+    )
 
 
 def preflight_descriptor(descriptor: dict[str, Any] | None) -> dict[str, Any]:
@@ -94,7 +107,7 @@ def preflight_descriptor(descriptor: dict[str, Any] | None) -> dict[str, Any]:
             safe_next_action="Refresh metadata or choose a current candidate.",
             repair_path="Update source trace and stale/deprecated status.",
         )
-    if descriptor.get("external_action") or descriptor.get("public_post_action") or descriptor.get("approval_required"):
+    if _has_external_boundary(descriptor):
         return _result(
             decision="HOLD_HUMAN_APPROVAL_REQUIRED",
             reason_codes=["EXTERNAL_APPROVAL_REQUIRED"],

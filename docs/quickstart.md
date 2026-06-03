@@ -1,11 +1,19 @@
 # Quickstart
 
-Run locally from the future standalone repo root:
+Run locally from the standalone repo root after a local install:
 
 ```bash
 python -m agentsec_preflight.cli --sample
 python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 python -m agentsec_preflight.cli --report
+```
+
+From a fresh clone without installing, use the source tree explicitly:
+
+```bash
+PYTHONPATH=src python -m agentsec_preflight.cli --sample
+PYTHONPATH=src python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
+PYTHONPATH=src python -m agentsec_preflight.cli --report
 ```
 
 No network, credentials, live runtime, live MCP/tool call, GitHub API, PyPI publish, or external action is required.

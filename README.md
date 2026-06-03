@@ -8,11 +8,15 @@ Run it locally. No network required.
 
 ## 5-Minute Local Path
 
+After installing the package locally, run:
+
 ```bash
 python -m agentsec_preflight.cli --sample
 python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 python -m agentsec_preflight.cli --report
 ```
+
+From a fresh clone without installing, prefix the same commands with `PYTHONPATH=src`.
 
 ## Checks
 
@@ -54,6 +58,7 @@ This repository is the standalone public AgentSec Preflight repo extracted from 
 
 ## Start Here
 
+- `src/agentsec_preflight/` contains the local CLI and report builder.
 - `examples/` contains local synthetic descriptors.
 - `reports/` contains sample PASS/HOLD/BLOCK/no-match reports.
 - `docs/quickstart.md` gives the developer path.
@@ -68,4 +73,3 @@ This repository is the standalone public AgentSec Preflight repo extracted from 
 This standalone public repo is prepared under Apache-2.0.
 
 No GitHub release, PyPI package, MCP Registry listing, Hugging Face upload, DNS change, site deployment, OpenClaw/Hermes install, live runtime execution, live MCP/tool call, or external action is performed by this pack.
-
