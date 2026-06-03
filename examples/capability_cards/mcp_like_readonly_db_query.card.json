@@ -1,0 +1,16 @@
+{
+  "action_boundary": "read-only database scope",
+  "capability_id": "mcp_like_readonly_db_query",
+  "expected_route": "PASS",
+  "human_approval_required": false,
+  "live_integration": false,
+  "must_not_claim": ["not MCP integration", "not data correctness guarantee", "not security certification"],
+  "permissions": ["database_read_scope", "schema_present", "source_trace"],
+  "purpose": "Represent a synthetic MCP-like readonly database query.",
+  "receipt_required": true,
+  "rollback_available": false,
+  "runtime_family": "mcp_like",
+  "side_effects": ["read-only result if live"],
+  "synthetic_only": true,
+  "tool_type": "database_read"
+}

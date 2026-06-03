@@ -1,0 +1,18 @@
+{
+  "approval_required": true,
+  "auth_scope_present": true,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "claim_overreach_terms": [],
+  "deprecated_signal": false,
+  "descriptor_id": "github_merge_forbidden",
+  "destructive_action": true,
+  "docs_url_present": true,
+  "external_action": true,
+  "input_schema_present": true,
+  "name": "GitHub Merge Forbidden",
+  "public_post_action": true,
+  "required_fields_present": true,
+  "schema": "AgentSecPreflightInput/v0.1",
+  "source_trace_count": 1,
+  "tool_type": "github_merge"
+}

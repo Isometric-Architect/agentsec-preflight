@@ -1,0 +1,21 @@
+{
+  "action_surface": "exec_readonly",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["local_read_scope"],
+  "descriptor_id": "openclaw_like_exec_readonly",
+  "destructive_action": false,
+  "expected_route": "PASS_SANDBOXED_OR_HOLD_POLICY",
+  "external_action": false,
+  "human_approval_required": false,
+  "live_integration": false,
+  "must_not_claim": ["not OpenClaw integration", "not shell safety proof", "not security certification"],
+  "network_access": "none_in_fixture",
+  "permissions": ["sandbox", "readonly_command_policy"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "openclaw_like",
+  "side_effects": ["stdout_only_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

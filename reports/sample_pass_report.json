@@ -1,0 +1,26 @@
+{
+  "action_authorization": false,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "decision": "PASS_READONLY_SCOPED",
+  "descriptor_id": "readonly_db_query",
+  "must_not_claim": [
+    "PASS is not security certification.",
+    "PASS is not product readiness.",
+    "PASS is not action authorization."
+  ],
+  "negative_cache_labels": [],
+  "no_match_guard_triggered": false,
+  "product_readiness": false,
+  "reason_codes": ["READONLY_METADATA_SUFFICIENT"],
+  "report_id": "report_readonly_db_query",
+  "run_receipt_stub": {
+    "action_taken": false,
+    "external_action_performed": false,
+    "external_api_called": false,
+    "live_probe_performed": false
+  },
+  "safe_next_action": "Use only inside read-only scope.",
+  "schema": "AgentSecPreflightReport/v0.1",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
+}

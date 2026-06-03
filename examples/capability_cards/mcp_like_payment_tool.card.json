@@ -1,0 +1,16 @@
+{
+  "action_boundary": "payment action is blocked by local fixture boundary",
+  "capability_id": "mcp_like_payment_tool",
+  "expected_route": "BLOCK",
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not MCP integration", "not payment authorization", "not procurement approval"],
+  "permissions": ["payment_policy", "separate_approval"],
+  "purpose": "Represent a synthetic MCP-like payment surface.",
+  "receipt_required": true,
+  "rollback_available": false,
+  "runtime_family": "mcp_like",
+  "side_effects": ["payment or purchase if live"],
+  "synthetic_only": true,
+  "tool_type": "payment_tool"
+}

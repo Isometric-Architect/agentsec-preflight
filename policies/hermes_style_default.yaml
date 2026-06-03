@@ -1,0 +1,16 @@
+policy_id: hermes_style_default_v0_1
+scope: synthetic_hermes_like_runtime_fixture_policy
+live_integration: false
+rules:
+  skill_creation: HOLD_REVIEW_REQUIRED
+  skill_install: HOLD_SECURITY_REVIEW
+  scheduled_automation: HOLD_OPERATOR_POLICY
+  memory_write: HOLD_SCOPE_AND_RETENTION_POLICY
+  chat_platform_send: HOLD_HUMAN_CONFIRM
+  self_improvement_patch: HOLD_REVIEW_AND_RECEIPT
+  external_action: BLOCK_OR_EXPLICIT_APPROVAL_ONLY
+claim_ceiling:
+  - local_synthetic_runtime_fixture_policy_only
+  - no_live_hermes_integration
+  - no_security_certification
+  - no_action_authorization

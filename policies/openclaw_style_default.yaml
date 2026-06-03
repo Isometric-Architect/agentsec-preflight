@@ -1,0 +1,20 @@
+policy_id: openclaw_style_default_v0_1
+scope: synthetic_openclaw_like_runtime_fixture_policy
+live_integration: false
+rules:
+  web_search: PASS_WITH_SOURCE_RECEIPT
+  web_fetch: PASS_WITH_URL_RECEIPT
+  browser_login: HOLD_HUMAN_APPROVAL_REQUIRED
+  browser_form_submit: HOLD_OR_BLOCK_EXTERNAL_ACTION
+  exec_readonly: PASS_SANDBOXED_OR_HOLD_POLICY
+  exec_write: HOLD_DIFF_REVIEW_REQUIRED
+  message_send: HOLD_HUMAN_CONFIRM
+  email_send: HOLD_HUMAN_CONFIRM
+  file_delete: BLOCK_UNLESS_BACKUP_AND_APPROVAL
+  payment_or_purchase: BLOCK_EXTERNAL_ACTION
+  deploy_or_merge: BLOCK_OR_EXPLICIT_APPROVAL_ONLY
+claim_ceiling:
+  - local_synthetic_runtime_fixture_policy_only
+  - no_live_openclaw_integration
+  - no_security_certification
+  - no_action_authorization

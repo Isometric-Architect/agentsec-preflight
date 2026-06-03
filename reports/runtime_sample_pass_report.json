@@ -1,0 +1,16 @@
+{
+  "action_authorization": false,
+  "avoided_failure_modes": ["read_tool_to_write_tool_confusion"],
+  "blocked_action": null,
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "decision": "PASS_READONLY_SCOPED",
+  "input_ref": "mcp_like_readonly_db_query",
+  "product_readiness": false,
+  "reason_codes": ["READONLY_SCOPE_PRESENT", "SOURCE_TRACE_PRESENT", "RECEIPT_REQUIRED"],
+  "receipt_ref": "runtime_pass_draft_only_receipt",
+  "repair_path": null,
+  "report_id": "runtime_sample_pass_report",
+  "safe_next_action": "Use only within the read-only synthetic fixture scope and record receipt context.",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight identifies the request as read-only before spending a tool-call turn on mutation checks."
+}

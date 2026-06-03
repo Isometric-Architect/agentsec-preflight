@@ -1,0 +1,16 @@
+{
+  "action_authorization": false,
+  "avoided_failure_modes": ["exec_readonly_to_exec_write_confusion", "draft_to_send_confusion"],
+  "blocked_action": "execute_write_or_send_without_review",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "decision": "HOLD_DIFF_REVIEW_REQUIRED",
+  "input_ref": "openclaw_like_exec_write",
+  "product_readiness": false,
+  "reason_codes": ["DIFF_REVIEW_REQUIRED", "ROLLBACK_PLAN_MISSING", "HUMAN_APPROVAL_REQUIRED"],
+  "receipt_ref": "runtime_hold_receipt",
+  "repair_path": "Add diff summary, rollback plan, sandbox boundary, and human approval.",
+  "report_id": "runtime_sample_hold_report",
+  "safe_next_action": "Prepare review material before any write-like runtime action.",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight avoids a likely wasted or unsafe exec turn by finding missing review inputs before invocation."
+}

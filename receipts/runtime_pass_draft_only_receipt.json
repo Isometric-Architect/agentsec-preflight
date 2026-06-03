@@ -1,0 +1,14 @@
+{
+  "action_not_taken": "no external or mutating action performed",
+  "action_taken": false,
+  "approval_status": "not_required_for_readonly_fixture",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "descriptor_ref": "mcp_like_readonly_db_query",
+  "external_action_performed": false,
+  "live_runtime_executed": false,
+  "live_tool_call_performed": false,
+  "must_not_claim": ["PASS is not security certification", "PASS is not product readiness", "PASS is not action authorization"],
+  "preflight_decision": "PASS_READONLY_SCOPED",
+  "reason_codes": ["READONLY_SCOPE_PRESENT", "SOURCE_TRACE_PRESENT", "RECEIPT_REQUIRED"],
+  "receipt_id": "runtime_pass_draft_only_receipt"
+}

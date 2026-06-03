@@ -1,0 +1,16 @@
+{
+  "action_boundary": "workspace mutation requires diff review and rollback plan",
+  "capability_id": "openclaw_like_exec_write",
+  "expected_route": "HOLD",
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not OpenClaw integration", "not shell authorization", "not security certification"],
+  "permissions": ["sandbox", "write_scope", "diff_review", "rollback_plan"],
+  "purpose": "Represent a synthetic OpenClaw-like shell write surface.",
+  "receipt_required": true,
+  "rollback_available": false,
+  "runtime_family": "openclaw_like",
+  "side_effects": ["filesystem mutation if live"],
+  "synthetic_only": true,
+  "tool_type": "exec_write"
+}

@@ -1,0 +1,14 @@
+{
+  "arguments_summary": "Search public docs for a local fixture example.",
+  "approval_status": "not_required_for_readonly_fixture",
+  "blocked_action": null,
+  "claim_ceiling": ["local_synthetic_action_request_only"],
+  "context": "No live search is performed by this fixture.",
+  "descriptor_ref": "openclaw_like_web_search",
+  "expected_decision": "PASS",
+  "expected_reason_codes": ["READONLY_DISCOVERY_SCOPE", "SOURCE_RECEIPT_REQUIRED"],
+  "intent": "Discover static documentation references.",
+  "request_id": "web_search_readonly",
+  "requested_action": "web_search",
+  "safe_next_action": "Return receipt-scoped search summary from synthetic fixture only."
+}

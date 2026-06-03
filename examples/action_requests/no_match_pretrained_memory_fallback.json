@@ -1,0 +1,14 @@
+{
+  "arguments_summary": "Use a remembered runtime schema when no descriptor matches.",
+  "approval_status": "not_applicable",
+  "blocked_action": "pretrained_memory_fallback",
+  "claim_ceiling": ["local_synthetic_action_request_only"],
+  "context": "No usable capability descriptor is present.",
+  "descriptor_ref": "NO_MATCH",
+  "expected_decision": "NO_MATCH",
+  "expected_reason_codes": ["NO_USABLE_CAPABILITY_FOUND", "PRETRAINED_MEMORY_FALLBACK_BLOCKED"],
+  "intent": "Call a tool from memory.",
+  "request_id": "no_match_pretrained_memory_fallback",
+  "requested_action": "unknown_runtime_tool_call",
+  "safe_next_action": "Ask for a descriptor, schema, auth scope, and policy before action."
+}

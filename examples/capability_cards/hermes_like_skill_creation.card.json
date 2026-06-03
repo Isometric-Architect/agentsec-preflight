@@ -1,0 +1,16 @@
+{
+  "action_boundary": "persistent skill creation requires review",
+  "capability_id": "hermes_like_skill_creation",
+  "expected_route": "HOLD",
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not Hermes integration", "not skill approval", "not security certification"],
+  "permissions": ["skill_write_scope", "review_policy", "receipt"],
+  "purpose": "Represent synthetic persistent skill creation.",
+  "receipt_required": true,
+  "rollback_available": false,
+  "runtime_family": "hermes_like",
+  "side_effects": ["persistent capability change if live"],
+  "synthetic_only": true,
+  "tool_type": "skill_creation"
+}

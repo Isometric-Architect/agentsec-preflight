@@ -1,0 +1,21 @@
+{
+  "action_surface": "skill_install",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["skill_package_summary"],
+  "descriptor_id": "hermes_like_skill_install",
+  "destructive_action": false,
+  "expected_route": "HOLD_SECURITY_REVIEW",
+  "external_action": false,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not Hermes integration", "not install approval", "not security certification"],
+  "network_access": "none_in_fixture",
+  "permissions": ["install_scope", "source_trace", "review_status"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "hermes_like",
+  "side_effects": ["runtime_behavior_change_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

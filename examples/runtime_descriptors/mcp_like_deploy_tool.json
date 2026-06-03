@@ -1,0 +1,21 @@
+{
+  "action_surface": "deploy_tool",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": true,
+  "data_access": ["deployment_target_summary"],
+  "descriptor_id": "mcp_like_deploy_tool",
+  "destructive_action": true,
+  "expected_route": "BLOCK_OR_EXPLICIT_APPROVAL_ONLY",
+  "external_action": true,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not MCP integration", "not deployment authorization", "not product readiness"],
+  "network_access": "would_require_deploy_network_if_live",
+  "permissions": ["deploy_scope", "rollback_plan", "separate_approval"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "mcp_like",
+  "side_effects": ["deploy_or_merge_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

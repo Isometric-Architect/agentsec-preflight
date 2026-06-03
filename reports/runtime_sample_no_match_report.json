@@ -1,0 +1,16 @@
+{
+  "action_authorization": false,
+  "avoided_failure_modes": ["no_match_to_pretrained_memory_fallback"],
+  "blocked_action": "pretrained_memory_runtime_tool_call",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "decision": "HOLD_NO_USABLE_CAPABILITY_FOUND",
+  "input_ref": "no_match_pretrained_memory_fallback",
+  "product_readiness": false,
+  "reason_codes": ["NO_USABLE_CAPABILITY_FOUND", "PRETRAINED_MEMORY_FALLBACK_BLOCKED"],
+  "receipt_ref": "runtime_no_action_receipt",
+  "repair_path": "Ask for a runtime descriptor, schema, auth scope, policy, and source trace.",
+  "report_id": "runtime_sample_no_match_report",
+  "safe_next_action": "Do not call a tool from memory; request a usable descriptor first.",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight avoids hallucinated runtime calls by blocking memory-only tool availability claims."
+}

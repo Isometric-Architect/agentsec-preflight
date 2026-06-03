@@ -1,0 +1,21 @@
+{
+  "action_surface": "external_side_effect_tool",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["external_object_summary"],
+  "descriptor_id": "mcp_like_external_side_effect_tool",
+  "destructive_action": false,
+  "expected_route": "HOLD_HUMAN_APPROVAL_REQUIRED",
+  "external_action": true,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not MCP integration", "not external action authorization", "not security certification"],
+  "network_access": "would_require_external_system_if_live",
+  "permissions": ["external_write_scope", "policy_doc", "human_approval"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "mcp_like",
+  "side_effects": ["external_state_mutation_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

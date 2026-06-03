@@ -1,0 +1,33 @@
+{
+  "action_authorization": false,
+  "blocked_next_action": "Do not invent a tool call from pretrained memory.",
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "decision": "HOLD_NO_USABLE_CAPABILITY_FOUND",
+  "descriptor_id": "NO_MATCH",
+  "must_not_claim": [
+    "No-match is not proof that no tool exists globally.",
+    "No-match is not action authorization."
+  ],
+  "negative_cache_labels": [
+    "NEG_NO_USABLE_CAPABILITY_FOUND",
+    "NEG_RUNTIME_TOOL_SCHEMA_REQUIRED"
+  ],
+  "no_match_guard_triggered": true,
+  "product_readiness": false,
+  "reason_codes": [
+    "NO_USABLE_CAPABILITY_FOUND",
+    "RUNTIME_TOOL_SCHEMA_REQUIRED"
+  ],
+  "repair_path": "Provide a current descriptor, narrow the objective, or use a draft/no-action fallback.",
+  "report_id": "report_NO_MATCH",
+  "run_receipt_stub": {
+    "action_taken": false,
+    "external_action_performed": false,
+    "external_api_called": false,
+    "live_probe_performed": false
+  },
+  "safe_next_action": "Inspect current runtime tools or ask the user for a current descriptor.",
+  "schema": "AgentSecPreflightReport/v0.1",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
+}

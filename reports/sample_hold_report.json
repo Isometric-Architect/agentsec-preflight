@@ -1,0 +1,27 @@
+{
+  "action_authorization": false,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "decision": "HOLD_MISSING_AUTH_OR_SCOPE",
+  "descriptor_id": "email_send_missing_approval",
+  "must_not_claim": [
+    "HOLD is not approval to send.",
+    "HOLD is not security certification.",
+    "HOLD is not action authorization."
+  ],
+  "negative_cache_labels": ["NEG_MISSING_AUTH_OR_SCOPE"],
+  "no_match_guard_triggered": false,
+  "product_readiness": false,
+  "reason_codes": ["MISSING_AUTH_OR_SCOPE"],
+  "repair_path": "Add auth/scope metadata and rerun preflight.",
+  "report_id": "report_email_send_missing_approval",
+  "run_receipt_stub": {
+    "action_taken": false,
+    "external_action_performed": false,
+    "external_api_called": false,
+    "live_probe_performed": false
+  },
+  "safe_next_action": "Request explicit scope and approval before action.",
+  "schema": "AgentSecPreflightReport/v0.1",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
+}

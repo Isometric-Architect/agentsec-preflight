@@ -1,0 +1,21 @@
+{
+  "action_surface": "web_search",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["query_text"],
+  "descriptor_id": "openclaw_like_web_search",
+  "destructive_action": false,
+  "expected_route": "PASS_WITH_SOURCE_RECEIPT",
+  "external_action": false,
+  "human_approval_required": false,
+  "live_integration": false,
+  "must_not_claim": ["not OpenClaw integration", "not external endorsement", "not security certification"],
+  "network_access": "synthetic_policy_only",
+  "permissions": ["search_scope", "source_receipt"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "openclaw_like",
+  "side_effects": ["search_provider_call_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

@@ -1,0 +1,21 @@
+{
+  "action_surface": "browser_login",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": true,
+  "data_access": ["account_session_state"],
+  "descriptor_id": "openclaw_like_browser_login",
+  "destructive_action": false,
+  "expected_route": "HOLD_HUMAN_APPROVAL_REQUIRED",
+  "external_action": true,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not OpenClaw integration", "not login authorization", "not security certification"],
+  "network_access": "would_require_browser_network_if_live",
+  "permissions": ["credential_boundary", "account_scope", "human_approval"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "openclaw_like",
+  "side_effects": ["session_state_change_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

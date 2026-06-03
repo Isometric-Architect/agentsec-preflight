@@ -1,0 +1,21 @@
+{
+  "action_surface": "scheduled_automation",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["schedule", "task_summary"],
+  "descriptor_id": "hermes_like_scheduled_automation",
+  "destructive_action": false,
+  "expected_route": "HOLD_OPERATOR_POLICY",
+  "external_action": true,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not Hermes integration", "not automation approval", "not action authorization"],
+  "network_access": "depends_on_future_live_runtime",
+  "permissions": ["schedule_scope", "cancel_path", "operator_policy"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "hermes_like",
+  "side_effects": ["future_action_execution_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

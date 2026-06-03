@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "decision": {"type": "string"},
+    "report_id": {"type": "string"}
+  },
+  "required": [
+    "report_id",
+    "descriptor_id",
+    "decision",
+    "reason_codes",
+    "safe_next_action",
+    "claim_ceiling"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,33 @@
+{
+  "action_authorization": false,
+  "blocked_next_action": "Do not perform the external destructive action.",
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "decision": "BLOCK_FORBIDDEN_ACTION",
+  "descriptor_id": "github_merge_forbidden",
+  "must_not_claim": [
+    "BLOCK is not safe to proceed.",
+    "BLOCK is not security certification.",
+    "BLOCK is not action authorization."
+  ],
+  "negative_cache_labels": [
+    "NEG_FORBIDDEN_ACTION",
+    "NEG_DESTRUCTIVE_ACTION_PREFLIGHT_REQUIRED"
+  ],
+  "no_match_guard_triggered": false,
+  "product_readiness": false,
+  "reason_codes": [
+    "FORBIDDEN_ACTION",
+    "DESTRUCTIVE_ACTION_PREFLIGHT_REQUIRED"
+  ],
+  "report_id": "report_github_merge_forbidden",
+  "run_receipt_stub": {
+    "action_taken": false,
+    "external_action_performed": false,
+    "external_api_called": false,
+    "live_probe_performed": false
+  },
+  "safe_next_action": "Prepare a local review packet with diff, rollback, policy, and approval.",
+  "schema": "AgentSecPreflightReport/v0.1",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
+}

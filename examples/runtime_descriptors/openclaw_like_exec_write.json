@@ -1,0 +1,21 @@
+{
+  "action_surface": "exec_write",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_only", "no_live_integration", "no_action_authorization"],
+  "credential_access": false,
+  "data_access": ["workspace_write_scope"],
+  "descriptor_id": "openclaw_like_exec_write",
+  "destructive_action": true,
+  "expected_route": "HOLD_DIFF_REVIEW_REQUIRED",
+  "external_action": false,
+  "human_approval_required": true,
+  "live_integration": false,
+  "must_not_claim": ["not OpenClaw integration", "not write authorization", "not security certification"],
+  "network_access": "none_in_fixture",
+  "permissions": ["sandbox", "write_scope", "diff_review", "rollback_plan"],
+  "public_post_action": false,
+  "receipt_required": true,
+  "runtime_family": "openclaw_like",
+  "side_effects": ["filesystem_mutation_if_live"],
+  "source_basis": "RUN_AGENT_RUNTIME_RECON_001",
+  "synthetic_descriptor_only": true
+}

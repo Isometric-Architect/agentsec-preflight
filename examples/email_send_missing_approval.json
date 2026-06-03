@@ -1,0 +1,18 @@
+{
+  "approval_required": true,
+  "auth_scope_present": false,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "claim_overreach_terms": [],
+  "deprecated_signal": false,
+  "descriptor_id": "email_send_missing_approval",
+  "destructive_action": false,
+  "docs_url_present": true,
+  "external_action": true,
+  "input_schema_present": true,
+  "name": "Email Send Missing Approval",
+  "public_post_action": false,
+  "required_fields_present": true,
+  "schema": "AgentSecPreflightInput/v0.1",
+  "source_trace_count": 1,
+  "tool_type": "email_send"
+}

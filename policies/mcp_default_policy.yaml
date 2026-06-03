@@ -1,0 +1,19 @@
+policy_id: mcp_default_policy_v0_1
+scope: synthetic_mcp_like_runtime_fixture_policy
+live_integration: false
+rules:
+  readonly_tool: PASS_WITH_RECEIPT
+  database_read: PASS_READONLY_SCOPED
+  database_write: HOLD_OR_BLOCK_MUTATION
+  external_side_effect_tool: HOLD_HUMAN_APPROVAL_REQUIRED
+  payment_tool: BLOCK_EXTERNAL_ACTION
+  deploy_tool: BLOCK_OR_EXPLICIT_APPROVAL_ONLY
+  tools_list_changed: HOLD_CAPABILITY_DELTA_REVIEW
+  missing_source_trace: BLOCK_NO_SOURCE_TRACE
+  missing_docs_or_policy: HOLD_MISSING_DOCS_OR_POLICY
+claim_ceiling:
+  - local_synthetic_runtime_fixture_policy_only
+  - no_live_mcp_integration
+  - no_mcp_registry_readiness
+  - no_security_certification
+  - no_action_authorization

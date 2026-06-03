@@ -1,0 +1,14 @@
+{
+  "action_not_taken": "runtime action held pending repair path",
+  "action_taken": false,
+  "approval_status": "missing",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "descriptor_ref": "openclaw_like_exec_write",
+  "external_action_performed": false,
+  "live_runtime_executed": false,
+  "live_tool_call_performed": false,
+  "must_not_claim": ["HOLD is not denial of all future action", "not security certification", "not action authorization"],
+  "preflight_decision": "HOLD_DIFF_REVIEW_REQUIRED",
+  "reason_codes": ["DIFF_REVIEW_REQUIRED", "ROLLBACK_PLAN_MISSING", "HUMAN_APPROVAL_REQUIRED"],
+  "receipt_id": "runtime_hold_receipt"
+}

@@ -1,0 +1,18 @@
+{
+  "approval_required": false,
+  "auth_scope_present": true,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "claim_overreach_terms": [],
+  "deprecated_signal": true,
+  "descriptor_id": "stale_deprecated_candidate",
+  "destructive_action": false,
+  "docs_url_present": true,
+  "external_action": false,
+  "input_schema_present": true,
+  "name": "Stale Deprecated Candidate",
+  "public_post_action": false,
+  "required_fields_present": true,
+  "schema": "AgentSecPreflightInput/v0.1",
+  "source_trace_count": 1,
+  "tool_type": "legacy_connector"
+}

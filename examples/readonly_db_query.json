@@ -1,0 +1,18 @@
+{
+  "approval_required": false,
+  "auth_scope_present": true,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "claim_overreach_terms": [],
+  "deprecated_signal": false,
+  "descriptor_id": "readonly_db_query",
+  "destructive_action": false,
+  "docs_url_present": true,
+  "external_action": false,
+  "input_schema_present": true,
+  "name": "Read-Only DB Query",
+  "public_post_action": false,
+  "required_fields_present": true,
+  "schema": "AgentSecPreflightInput/v0.1",
+  "source_trace_count": 1,
+  "tool_type": "readonly_query"
+}

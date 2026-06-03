@@ -1,0 +1,18 @@
+{
+  "approval_required": true,
+  "auth_scope_present": true,
+  "claim_ceiling": ["standalone_extraction_pack_only"],
+  "claim_overreach_terms": [],
+  "deprecated_signal": false,
+  "descriptor_id": "destructive_db_update_missing_preflight",
+  "destructive_action": true,
+  "docs_url_present": true,
+  "external_action": false,
+  "input_schema_present": true,
+  "name": "Destructive DB Update Missing Preflight",
+  "public_post_action": false,
+  "required_fields_present": true,
+  "schema": "AgentSecPreflightInput/v0.1",
+  "source_trace_count": 1,
+  "tool_type": "database_update"
+}

@@ -1,0 +1,14 @@
+{
+  "action_not_taken": "payment/deploy/external action blocked by local fixture boundary",
+  "action_taken": false,
+  "approval_status": "missing_separate_authorization",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "descriptor_ref": "mcp_like_payment_tool",
+  "external_action_performed": false,
+  "live_runtime_executed": false,
+  "live_tool_call_performed": false,
+  "must_not_claim": ["BLOCK is not security certification", "not payment authorization", "not deployment authorization"],
+  "preflight_decision": "BLOCK_EXTERNAL_ACTION",
+  "reason_codes": ["PAYMENT_BLOCKED", "EXTERNAL_ACTION_AUTHORIZATION_REQUIRED"],
+  "receipt_id": "runtime_block_receipt"
+}

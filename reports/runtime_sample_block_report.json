@@ -1,0 +1,16 @@
+{
+  "action_authorization": false,
+  "avoided_failure_modes": ["payment_without_approval", "confidence_to_action_license"],
+  "blocked_action": "payment_tool_call",
+  "claim_ceiling": ["local_synthetic_runtime_fixture_pack_only"],
+  "decision": "BLOCK_EXTERNAL_ACTION",
+  "input_ref": "mcp_like_payment_tool",
+  "product_readiness": false,
+  "reason_codes": ["PAYMENT_BLOCKED", "EXTERNAL_ACTION_AUTHORIZATION_REQUIRED"],
+  "receipt_ref": "runtime_block_receipt",
+  "repair_path": "Route to a separate payment approval workflow outside this fixture.",
+  "report_id": "runtime_sample_block_report",
+  "safe_next_action": "Stop the action and record that no payment was performed.",
+  "security_certification": false,
+  "turn_saving_reason": "Preflight blocks a prohibited external action before the agent tries a live payment-capable tool."
+}

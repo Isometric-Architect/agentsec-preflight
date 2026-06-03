@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "action_taken": {"type": "boolean"},
+    "receipt_id": {"type": "string"}
+  },
+  "required": [
+    "receipt_id",
+    "input_descriptor_ref",
+    "preflight_decision",
+    "action_taken",
+    "external_action_performed",
+    "reason_codes",
+    "claim_ceiling"
+  ],
+  "type": "object"
+}
