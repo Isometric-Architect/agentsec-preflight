@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Synthetic descriptors used by local AgentSec Preflight smoke checks."""
+
 from typing import Any
 
 from .models import CLAIM_CEILING

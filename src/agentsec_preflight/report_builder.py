@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Build local preflight reports and receipts without external calls."""
+
 from datetime import UTC, datetime
 from typing import Any
 

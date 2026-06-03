@@ -16,7 +16,7 @@ python -m agentsec_preflight.cli --preflight examples/email_send_missing_approva
 python -m agentsec_preflight.cli --report
 ```
 
-From a fresh clone without installing, prefix the same commands with `PYTHONPATH=src`.
+From a fresh clone without installing, the repository includes a checkout shim so those `python -m` commands work from the repo root during local smoke checks. `PYTHONPATH=src` also works if you prefer to point directly at the source tree.
 
 ## Checks
 

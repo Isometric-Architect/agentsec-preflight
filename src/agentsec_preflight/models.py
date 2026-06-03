@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Small validation helpers and public claim ceilings."""
+
 from typing import Any
 
 

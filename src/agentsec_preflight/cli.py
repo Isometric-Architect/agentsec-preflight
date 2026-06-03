@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Command-line entry point for local AgentSec Preflight reports."""
+
 import argparse
 import json
 from pathlib import Path

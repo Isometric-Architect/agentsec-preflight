@@ -16,6 +16,8 @@ PYTHONPATH=src python -m agentsec_preflight.cli --preflight examples/email_send_
 PYTHONPATH=src python -m agentsec_preflight.cli --report
 ```
 
+The root checkout shim also makes the shorter `python -m` form work from a clean checkout.
+
 No network, credentials, live runtime, live MCP/tool call, GitHub API, PyPI publish, or external action is required.
 
 ## Interpret Decisions

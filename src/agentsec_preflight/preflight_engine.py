@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Deterministic PASS/HOLD/BLOCK routing for synthetic descriptors."""
+
 from typing import Any
 
 from .models import CLAIM_CEILING
