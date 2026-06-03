@@ -12,6 +12,7 @@ from .preflight_engine import preflight_descriptor
 
 REPORT_SCHEMA = "AgentSecPreflightReport/v0.1"
 RECEIPT_SCHEMA = "AgentSecPreflightReceipt/v0.1"
+RECEIPT_MODE = "local_no_network"
 
 
 def build_report(descriptor: dict[str, Any] | None) -> dict[str, Any]:

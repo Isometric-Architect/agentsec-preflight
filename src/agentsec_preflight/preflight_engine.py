@@ -10,6 +10,7 @@ from .models import CLAIM_CEILING
 TURN_SAVING_REASON = (
     "Preflight before action avoids a likely wasted or unsafe next tool-call turn."
 )
+ENGINE_MODE = "deterministic_local"
 
 
 def _result(

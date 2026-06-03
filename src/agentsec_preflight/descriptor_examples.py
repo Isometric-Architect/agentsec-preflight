@@ -8,6 +8,7 @@ from .models import CLAIM_CEILING
 
 
 SAMPLE_SCHEMA = "AgentSecPreflightInput/v0.1"
+EXAMPLES_ARE_SYNTHETIC = True
 
 
 def _base() -> dict[str, Any]:

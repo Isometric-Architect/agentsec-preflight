@@ -8,15 +8,13 @@ Run it locally. No network required.
 
 ## 5-Minute Local Path
 
-After installing the package locally, run:
-
 ```bash
 python -m agentsec_preflight.cli --sample
 python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 python -m agentsec_preflight.cli --report
 ```
 
-From a fresh clone without installing, the repository includes a checkout shim so those `python -m` commands work from the repo root during local smoke checks. `PYTHONPATH=src` also works if you prefer to point directly at the source tree.
+Run these commands from an installed package or from a fresh checkout. The repository includes a checkout shim so `python -m` works from the repo root during local smoke checks. `PYTHONPATH=src` also works if you prefer to point directly at the source tree.
 
 ## Checks
 

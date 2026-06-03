@@ -22,6 +22,8 @@ DESCRIPTOR_REQUIRED_FIELDS = [
     "claim_overreach_terms",
 ]
 
+PACKAGE_ROLE = "local_preflight_cli"
+
 REPORT_REQUIRED_FIELDS = [
     "report_id",
     "decision",
