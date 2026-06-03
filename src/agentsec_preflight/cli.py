@@ -13,7 +13,7 @@ from .report_builder import build_receipt, build_report, sample_reports
 
 DEFAULT_DESCRIPTOR_ID = "email_send_missing_approval"
 DEFAULT_DESCRIPTOR_PATH = "examples/email_send_missing_approval.json"
-CLI_MODE = "local_no_network"
+CLI_MODE = "local_no_network_no_action"
 
 
 def _read_json_file(path: str) -> dict[str, Any]:

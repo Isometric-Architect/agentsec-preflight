@@ -14,8 +14,6 @@ python -m agentsec_preflight.cli --preflight examples/email_send_missing_approva
 python -m agentsec_preflight.cli --report
 ```
 
-Run these commands from an installed package or from a fresh checkout. The repository includes a checkout shim so `python -m` works from the repo root during local smoke checks. `PYTHONPATH=src` also works if you prefer to point directly at the source tree.
-
 ## Checks
 
 - missing auth or scope
@@ -57,6 +55,7 @@ This repository is the standalone public AgentSec Preflight repo extracted from 
 ## Start Here
 
 - `src/agentsec_preflight/` contains the local CLI and report builder.
+- The root checkout shim lets `python -m agentsec_preflight.cli ...` work before installation.
 - `examples/` contains local synthetic descriptors.
 - `reports/` contains sample PASS/HOLD/BLOCK/no-match reports.
 - `docs/quickstart.md` gives the developer path.

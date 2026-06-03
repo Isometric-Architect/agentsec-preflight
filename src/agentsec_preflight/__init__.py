@@ -11,7 +11,7 @@ from .preflight_engine import preflight_descriptor
 from .report_builder import build_receipt, build_report
 
 __version__ = "0.1.0.dev0"
-PACKAGE_ROLE = "local_preflight_cli"
+PACKAGE_ROLE = "local_preflight_cli_checkout_ready"
 
 __all__ = [
     "__version__",
