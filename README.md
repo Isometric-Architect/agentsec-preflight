@@ -8,9 +8,11 @@ Run it locally. No network required.
 
 ## 5-Minute Local Path
 
+```bash
 python -m agentsec_preflight.cli --sample
 python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 python -m agentsec_preflight.cli --report
+```
 
 ## Checks
 

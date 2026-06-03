@@ -2,9 +2,11 @@
 
 Run locally from the future standalone repo root:
 
+```bash
 python -m agentsec_preflight.cli --sample
 python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 python -m agentsec_preflight.cli --report
+```
 
 No network, credentials, live runtime, live MCP/tool call, GitHub API, PyPI publish, or external action is required.
 
