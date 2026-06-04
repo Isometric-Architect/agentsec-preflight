@@ -1,6 +1,16 @@
 # Quickstart
 
-Run locally from a fresh GitHub clone without installing:
+Run locally from a clean checkout with the root shim:
+
+```bash
+python -m agentsec_preflight.cli --sample
+python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
+python -m agentsec_preflight.cli --report
+```
+
+No network, credentials, live runtime, live MCP/tool call, GitHub API, PyPI publish, or external action is required.
+
+Canonical clone-without-install path:
 
 ```bash
 git clone https://github.com/Isometric-Architect/agentsec-preflight.git
@@ -9,8 +19,6 @@ PYTHONPATH=src python -m agentsec_preflight.cli --sample
 PYTHONPATH=src python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
 PYTHONPATH=src python -m agentsec_preflight.cli --report
 ```
-
-No network, credentials, live runtime, live MCP/tool call, GitHub API, PyPI publish, or external action is required.
 
 Optional local editable install:
 

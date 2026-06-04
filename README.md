@@ -6,29 +6,6 @@ AgentSec Preflight helps agents and developers check a tool before action: permi
 
 Run it locally. No network required.
 
-## 5-Minute Local Path
-
-### Clone Without Install
-
-```bash
-git clone https://github.com/Isometric-Architect/agentsec-preflight.git
-cd agentsec-preflight
-PYTHONPATH=src python -m agentsec_preflight.cli --sample
-PYTHONPATH=src python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
-PYTHONPATH=src python -m agentsec_preflight.cli --report
-```
-
-### Optional Local Editable Install
-
-```bash
-python -m pip install -e .
-agentsec-preflight --sample
-agentsec-preflight --preflight examples/email_send_missing_approval.json
-agentsec-preflight --report
-```
-
-No PyPI package has been published yet.
-
 ## When To Use It
 
 Run AgentSec Preflight before:
@@ -40,6 +17,16 @@ Run AgentSec Preflight before:
 - deploy, merge, payment, or contract action
 - unclear source trace or stale metadata
 - no-match fallback to pretrained memory
+
+## 5-Minute Local Path
+
+```bash
+git clone https://github.com/Isometric-Architect/agentsec-preflight.git
+cd agentsec-preflight
+PYTHONPATH=src python -m agentsec_preflight.cli --sample
+PYTHONPATH=src python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
+PYTHONPATH=src python -m agentsec_preflight.cli --report
+```
 
 ## Checks
 
@@ -53,10 +40,35 @@ Run AgentSec Preflight before:
 
 ## Output
 
-- PASS: scoped discovery/read-only/draft-only path
+- PASS for scoped discovery/read-only/draft paths
 - HOLD: reason, safe next action, and repair path
 - BLOCK: reason and blocked action
 - Receipt: what happened, what did not happen, and what must not be claimed
+
+### Clone Without Install
+
+The 5-minute path above is the canonical clone-without-install path.
+
+## Root Checkout Shim
+
+The root checkout shim also supports this shorter form from a clean checkout:
+
+```bash
+python -m agentsec_preflight.cli --sample
+python -m agentsec_preflight.cli --preflight examples/email_send_missing_approval.json
+python -m agentsec_preflight.cli --report
+```
+
+### Optional Local Editable Install
+
+```bash
+python -m pip install -e .
+agentsec-preflight --sample
+agentsec-preflight --preflight examples/email_send_missing_approval.json
+agentsec-preflight --report
+```
+
+No PyPI package has been published yet.
 
 ## Runtime Fixture Pack
 
